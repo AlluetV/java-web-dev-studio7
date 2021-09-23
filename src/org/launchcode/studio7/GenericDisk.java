@@ -3,7 +3,7 @@ package org.launchcode.studio7;
 import java.util.HashMap;
 import java.util.Map;
 
-public class GenericDisk {
+public class GenericDisk implements GenericDiskActions {
     private String nameDisk;
     private int capacityDisK;
     private String typeDisk;
@@ -78,26 +78,27 @@ public class GenericDisk {
                 '}';
     }
 
-
+    @Override
     public void spin(){
         System.out.println("A " + this.typeDisk + "spins a rate of " + this.speedRange + "rpm.");
     }
 
+    @Override
     public String pause() {
         return "*Silence*";
     }
 
-
+    @Override
     public void rewindDisc() {
         System.out.println("Rewind, rewind!");
     }
 
-
+    @Override
     public String reportData() {
         return this.toString();
     }
 
-
+    @Override
     public String readData() {
         return this.toString();
     }
