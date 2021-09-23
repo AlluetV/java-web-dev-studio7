@@ -1,7 +1,6 @@
 package org.launchcode.studio7;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class GenericDisk implements GenericDiskActions {
     private String nameDisk;
@@ -44,21 +43,7 @@ public class GenericDisk implements GenericDiskActions {
     }
 
     //Setters
-    public void setNameDisk(String nameDisk) {
-        this.nameDisk = nameDisk;
-    }
 
-    public void setCapacityDisK(int capacityDisK) {
-        this.capacityDisK = capacityDisK;
-    }
-
-    public void setTypeDisk(String typeDisk) {
-        this.typeDisk = typeDisk;
-    }
-
-    public void setSpeedRange(String speedRange) {
-        this.speedRange = speedRange;
-    }
 
     public void setContentsDisk(HashMap<Integer, String> contentsDisk) {
         this.contentsDisk = contentsDisk;
