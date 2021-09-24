@@ -2,7 +2,7 @@ package org.launchcode.studio7;
 
 import java.util.HashMap;
 
-public class GenericDisk implements GenericDiskActions {
+public class BaseDisk implements OpticalDisk {
     private String nameDisk;
     private int capacityDisK;
     private String typeDisk;
@@ -11,7 +11,7 @@ public class GenericDisk implements GenericDiskActions {
 
     //constructor
 
-    public GenericDisk(String nameDisk, int capacityDisK, String typeDisk, String speedRange, HashMap<Integer, String> contentsDisk) {
+    public BaseDisk(String nameDisk, int capacityDisK, String typeDisk, String speedRange, HashMap<Integer, String> contentsDisk) {
         this.nameDisk = nameDisk;
         this.capacityDisK = capacityDisK;
         this.typeDisk = typeDisk;
@@ -65,12 +65,12 @@ public class GenericDisk implements GenericDiskActions {
 
     @Override
     public void spin(){
-        System.out.println("A " + this.typeDisk + "spins a rate of " + this.speedRange + "rpm.");
+        System.out.println("A " + this.typeDisk + " spins a rate of " + this.speedRange + " rpm.");
     }
 
     @Override
-    public String pause() {
-        return "*Silence*";
+    public void pause() {
+        System.out.println("*Silence*");
     }
 
     @Override
@@ -79,13 +79,14 @@ public class GenericDisk implements GenericDiskActions {
     }
 
     @Override
-    public String reportData() {
-        return this.toString();
+    public void reportData() {
+        System.out.println(this.toString());
     }
 
     @Override
-    public String readData() {
-        return this.toString();
+    public void readData() {
+        System.out.println(this.toString());
     }
+
 
 }

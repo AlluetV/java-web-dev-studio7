@@ -19,14 +19,20 @@ public class Main {
         dvdMovies.put(3, "Alice in Wonderland");
 
         // TODO: Declare and initialize a CD and a DVD object.
-        CD fooFighters = new CD(" Indie/Rock",13,"CD","200-600",cdSongs);
-        DVD kidsMovies = new DVD("KidsMix",6,"DVD","1200-1400",dvdMovies);
+        CD fooFighters = new CD(" Indie/Rock",13,"CD","200-500",cdSongs);
+        DVD kidsMovies = new DVD("KidsMix",6,"DVD","570-1600",dvdMovies);
 
         // TODO: Call each CD and DVD method to verify that they work as expected.
+        System.out.println("CD disk\n");
         fooFighters.spin();
         fooFighters.readData();
+        fooFighters.rewindDisc();
+        fooFighters.pause();
 
+
+        System.out.println("\nDVD disk");
         kidsMovies.spin();
         kidsMovies.reportData();
+
     }
 }

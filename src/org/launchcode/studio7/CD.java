@@ -1,9 +1,8 @@
 package org.launchcode.studio7;
 
 import java.util.HashMap;
-import java.util.Map;
 
-public class CD extends GenericDisk {
+public class CD extends BaseDisk {
 
     //constructor
 
@@ -16,11 +15,12 @@ public class CD extends GenericDisk {
     // TODO: Determine which fields, methods, and constructors can be extended from the base class and which ones
     //  need to be declared separately.
 
-    public void storeDataDisk(GenericDisk data){
+    public void storeDataDisk(BaseDisk data){
 
     }
 
-    public void writeDataDisk(GenericDisk data){
+    public void writeDataDisk(BaseDisk data){
 
     }
+
 }
